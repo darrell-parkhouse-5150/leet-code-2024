@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two some</title>
+</head>
+<body>
+    <script>
+        const twoSum = (nums, target) =>{
+            const numToIndex = {};
+          
+            for (let i = 0; i < nums.length; i++) {
+              const complement = target - nums[i];
+          
+              if (complement in numToIndex) {
+                return [numToIndex[complement], i];
+              }
+          
+              numToIndex[nums[i]] = i;
+            }
+          
+            return [];
+          };
+
+          const nums = [0, 1, 2, 4, 9]
+          const target = 9
+          console.log(twoSum(nums, target));
+    </script>
+</body>
+</html>
