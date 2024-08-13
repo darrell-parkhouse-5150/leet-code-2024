@@ -20,7 +20,7 @@ const findMedSortedArr = (nums1, nums2) => {
 
         if (numsLeft <= _numsRight && _numsLeft <= numsRight) {
             if (total % 2 === 0) {
-                return (Math.max(numsLeft, _numsLeft) + MIDIInput(numsRight, _numsRight)) / 2
+                return (Math.max(numsLeft, _numsLeft) + Math.min(numsRight, _numsRight)) / 2
             } else {
                 Math.min(numsRight, _numsRight)
             }
